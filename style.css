@@ -1,0 +1,114 @@
+/* Reset Default Css */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+/* ------------------------ */
+
+body, input, button, label {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+body {
+    display:flex;
+    flex-direction: column;
+    background-color: #f9f6f2;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#new-book-form {
+    display: none;
+}
+
+.header {
+    background-color: #228B22;
+    padding: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+}
+
+.header h1 {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+#new-book {
+    margin-bottom: 10px;
+}
+
+button {
+    border-radius: 12px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(44, 62, 80, 0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover, button:focus {
+    background-color: #159c86;
+    transform: translateY(-2px) scale(1.04);
+    outline: none;
+}
+
+#new-book-form {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#new-book-form label {
+    font-weight: 500;
+    margin-top: 8px;
+    color: #228B22;
+}
+
+#new-book-form input[type="text"],
+#new-book-form input[type="number"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 15px;
+}
+
+#new-book-form input[type="checkbox"] {
+    margin-left: 8px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #FFF;
+    border-radius: 12px;
+    box-shadow: 13px 10px 3px rgba(44, 62, 80, 0.2);
+}
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
