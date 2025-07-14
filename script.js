@@ -36,15 +36,6 @@ function clearForm () {
     formRead.checked = false
 }
 
-// Auto-populate library for testing 
-function populateLibrary() {
-    myLibrary.push(
-        new Book("The Hobbit", "J.R.R. Tolkien", 310, "Read", crypto.randomUUID())
-    )
-}
-
-populateLibrary()
-// Testing Section ^^^
 
 function addBookToLibrary () {
     const title = document.getElementById('title').value
