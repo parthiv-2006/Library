@@ -4,6 +4,8 @@ const formTitle = document.querySelector('#title')
 const formAuthor = document.querySelector('#author')
 const formPages = document.querySelector('#pages')
 const formRead = document.querySelector('#read')
+const cardContainer = document.querySelector('.card-container')
+
 
 
 
@@ -53,7 +55,36 @@ function addBookToLibrary () {
 
 function displayBooks () {
     for (let i = 0; i < myLibrary.length; i++) {
-        console.log(myLibrary[i])
+        let currBook = myLibrary[i]
+        const card = document.createElement('div')
+        card.classList.add('card')
+        const title = document.createElement('p')
+        const author = document.createElement('p')
+        const pages = document.createElement('p')
+        const read = document.createElement('p')
+        const bookId = document.createElement('p')
+        title.textContent = `Title: ${currBook.title}`
+        author.textContent = `Author: ${currBook.author}`
+        pages.textContent = `Pages: ${currBook.pages}`
+        read.textContent = `Read: ${currBook.read}`
+        bookId.textContent = `Book Id: ${currBook.bookId}`
+        const deleteButton = document.createElement('button')
+        deleteButton.classList.add('delete-button')
+        deleteButton.textContent = 'Delete'
+        card.appendChild(title)
+        card.appendChild(author)
+        card.appendChild(pages)
+        card.appendChild(read)
+        card.appendChild(bookId)
+        card.appendChild(deleteButton)
+        cardContainer.appendChild(card)
+
+        deleteButton.addEventListener('click', ()=> {
+            cardContainer.removeChild(card)
+            myLibrary.splice(i, 1)
+        })
+
     }
 }
 
+displayBooks()
